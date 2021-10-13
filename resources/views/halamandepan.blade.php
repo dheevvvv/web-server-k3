@@ -8,8 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    
-	<img class="wave" src="img/hlmdpncb2.png">
+	<img class="wave" src="img/wave.png">
 	<div class="container">
 		<div class="img">
 			<img src="img/bg.svg">
@@ -23,7 +22,7 @@
            		   		<i class="fas fa-user"></i>
            		   </div>
            		   <div class="div">
-           		   		<h5>Email</h5>
+           		   		<h5>Username</h5>
            		   		<input type="text" class="input">
            		   </div>
            		</div>
@@ -38,7 +37,6 @@
             	</div>
             	<a href="#">Forgot Password?</a>
             	<input type="submit" class="btn" value="Login">
-                <p>Belum punya akun? <a href="#">Daftar</a></p>
             </form>
         </div>
     </div>
