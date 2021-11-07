@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Animated Login Form</title>
+	<title>E-incident</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
@@ -15,7 +15,8 @@
 			<img src="img/bg.svg">
 		</div>
 		<div class="login-content">
-			<form action="index.html">
+			<form action="/login" method="POST">
+				@csrf
 				<img src="img/avatar.svg">
 				<h2 class="title">Welcome</h2>
            		<div class="input-div one">
@@ -24,7 +25,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5>Email</h5>
-           		   		<input type="text" class="input">
+           		   		<input type="email" name="email" class="input" required>
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -33,12 +34,12 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Password</h5>
-           		    	<input type="password" class="input">
+           		    	<input type="password" name="password" class="input" required>
             	   </div>
             	</div>
             	<a href="#">Forgot Password?</a>
             	<input type="submit" class="btn" value="Login">
-                <p>Belum punya akun? <a href="#">Daftar</a></p>
+                <small>Belum punya akun? <a href="/register">Daftar</a></small>
             </form>
         </div>
     </div>
