@@ -37,67 +37,75 @@
     </style>
   </head>
   <body>
-
+    
     <section class="form my-4 mx-5">
 
-      <div class="container">
-        <div class="row g-0">
-          <div class="col-lg-5">
-            <img src="img/eincidentpng.png" class="img-fluid" alt="">
-          </div>
-          
-          <div class="col-lg-7 px-5 pt-5">
-            @if(session()->has('pesanberhasildaftar'))
-              <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ session('pesanberhasildaftar') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-              </div>
-            @endif
-            <h1><img src="img/logo.png" alt=""></h1>
-            <h4 class="fw-bold py-3 " style="color: #1178B3">Masuk</h4>
-            <form action="/login" method="POST">
-              @csrf
-              <div class="form-row">
-                <div class="col-lg-7">
-                  <input type="email" name="email" placeholder="Email" class="form-control my-3 p-2 @error('email') is-invalid @enderror"   value="{{ old('email') }}">
-                  @error('email')
-                    <div class="invalid-feedback">
-                      {{ $message }}
-      
-                    </div>
-                  @enderror
+        <div class="container">
+          <div class="row g-0">
+            <div class="col-lg-5">
+              <img src="img/eincidentpng.png" class="img-fluid" alt="">
+            </div>
+            
+            <div class="col-lg-7 px-5 pt-5">
+              @if(session()->has('pesanberhasildaftar'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  {{ session('pesanberhasildaftar') }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-      
-              </div>
-              <div class="form-row">
-                <div class="col-lg-7">
-                  <input type="password" name="password" placeholder="Kata Sandi" class="form-control my-3 p-2  @error('password') is-invalid @enderror"   value="{{ old('password') }}">
-                  @error('password')
-                    <div class="invalid-feedback">
-                      {{ $message }}
-      
-                    </div>
-                  @enderror
-                </div>
-              </div>
-      
+              @endif
 
-              <div class="form-row">
-                <div class="col-lg-7">
-                  <button type="submit" class="btn btn-primary">Masuk</button>
+              @if(session()->has('logingagal'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  {{ session('logingagal') }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-              </div>
-              <br>
-              <small>Belum punya akun? <a href="/register" class="fw-bold" style="color: #9095A3;">Daftar</a></small>
+              @endif
+              <h1><img src="img/logo.png" alt=""></h1>
+              <h4 class="fw-bold py-3 " style="color: #1178B3">Masuk</h4>
+              <form action="/login" method="POST">
+                @csrf
+                <div class="form-row">
+                  <div class="col-lg-7">
+                    <input type="email" name="email" placeholder="Email" class="form-control my-3 p-2 @error('email') is-invalid @enderror"   value="{{ old('email') }}">
+                    @error('email')
+                      <div class="invalid-feedback">
+                        {{ $message }}
+        
+                      </div>
+                    @enderror
+                  </div>
+        
+                </div>
+                <div class="form-row">
+                  <div class="col-lg-7">
+                    <input type="password" name="password" placeholder="Kata Sandi" class="form-control my-3 p-2  @error('password') is-invalid @enderror"   value="{{ old('password') }}">
+                    @error('password')
+                      <div class="invalid-feedback">
+                        {{ $message }}
+        
+                      </div>
+                    @enderror
+                  </div>
+                </div>
+        
 
-            </form>
+                <div class="form-row">
+                  <div class="col-lg-7">
+                    <button type="submit" class="btn btn-primary">Masuk</button>
+                  </div>
+                </div>
+                <br>
+                <small>Belum punya akun? <a href="/register" class="fw-bold" style="color: #9095A3;">Daftar</a></small>
+
+              </form>
+            </div>
+
           </div>
 
         </div>
 
-      </div>
-
     </section>
+    
 
     
 
